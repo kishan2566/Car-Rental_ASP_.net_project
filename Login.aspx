@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="car_rental_project.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <head>
+      <head>
     <meta charset="utf-8">
     <title>Cental - Login/Register</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -27,11 +27,17 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .auth-container {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        body {
+            background-color: #f1f1f1;
         }
+        .auth-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin: 40px auto;   /* adds spacing around the box */
+    padding: 20px;       /* adds inner spacing */
+    max-width: 450px;    /* keeps it neat in the center */
+}
 
         .auth-tabs .nav-link {
             color: #6c757d;
@@ -48,6 +54,8 @@
 
         .auth-form {
             padding: 30px;
+
+            
         }
 
         .social-login .btn {
@@ -86,15 +94,10 @@
 </head>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <body>
+      <body>
 
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
+   
     <!-- Topbar Start -->
     <div class="container-fluid topbar bg-secondary d-none d-xl-block w-100">
         <div class="container">
@@ -121,35 +124,37 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="display-6 text-primary"><i class="fas fa-car-alt me-3"></i></i>Cental</h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Our Feature</a>
-                                <a href="cars.html" class="dropdown-item">Our Cars</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
+              <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="" class="navbar-brand p-0">
+                        <h1 class="display-6 text-primary"><i class="fas fa-car-alt me-3"></i></i>Cental</h1>
+                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+     <div class="navbar-nav mx-auto py-0">
+         <a href="Home.aspx" class="nav-item nav-link ">Home</a>
+         <a href="about.aspx" class="nav-item nav-link">About</a>
+         <a href="service.aspx" class="nav-item nav-link">Service</a>
+         <a href="blog.aspx" class="nav-item nav-link">Blog</a>
+         
+         <div class="nav-item dropdown">
+             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+             <div class="dropdown-menu m-0">
+                 <a href="feature.aspx" class="dropdown-item">Our Feature</a>
+                 <a href="cars.aspx" class="dropdown-item">Our Cars</a>
+                 <a href="team.aspx" class="dropdown-item">Our Team</a>
+                 <a href="testimonial.aspx" class="dropdown-item">Testimonial</a>
+                 <a href="404.aspx" class="dropdown-item">404 Page</a>
+             </div>
+         </div>
+                            <a href="Contact.aspx" class="nav-item nav-link">Contact</a>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
                    
-                </div>
-            </nav>
+                    </div>
+                </nav>
         </div>
     </div>
     <!-- Navbar & Hero End -->
@@ -159,79 +164,43 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-6">
                     <div class="auth-container">
-                        <ul class="nav nav-tabs auth-tabs justify-content-center" id="authTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Register</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Login</button>
-                            </li>
-                        </ul>
+                        <div>
+                            <center>
+                            <h1 class="text-primary">Login</h1></center>
+                        </div>
+                       
                         <div class="tab-content" id="authTabContent">
                             <!-- Login Tab -->
-                            <div class="tab-pane fade show active auth-form" id="login" role="tabpanel" aria-labelledby="login-tab">
+                          
+
+                            <!-- Register Tab -->
+                            <div class="" id="register" role="tabpanel" aria-labelledby="register-tab">
                                 <form>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <label for="firstName" class="form-label">First Name</label>
-                                            <asp:TextBox id="First_Name" class="form-control" placeholder="First name" runat="server"></asp:TextBox>
-                                            
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <label for="lastName" class="form-label">Last Name</label>
-                                            <asp:TextBox id="Last_Name" class="form-control" placeholder="Last name" runat="server"></asp:TextBox>
-                                            
-                                        </div>
-                                    </div>
+                                     <div class="mb-4">
+                                         <label for="loginEmail" class="form-label">First_Name</label>
+                                         <asp:TextBox ID="First_Name" class="form-control" runat="server" placeholder="Enter your Name" required></asp:TextBox>
+     
+                                     </div>
                                     <div class="mb-4">
-                                        <label for="registerEmail" class="form-label">Email address</label>
-                                        <asp:TextBox id="Email" class="form-control" placeholder="Enter your email" runat="server"></asp:TextBox>
+                                        <label for="loginEmail" class="form-label">Email address</label>
+                                        <asp:TextBox ID="Email" class="form-control" runat="server" placeholder="Enter your email" required></asp:TextBox>
                                         
                                     </div>
                                     <div class="mb-4">
-                                        <label for="registerPassword" class="form-label">Password</label>
-                                        <asp:TextBox id="Password" class="form-control" placeholder="Create Password" runat="server"></asp:TextBox>
-                                       
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
-                                    </div>
-                                    <div class="form-check mb-4">
-                                        <input class="form-check-input" type="checkbox" id="termsCheck">
-                                        <label class="form-check-label" for="termsCheck">
-                                            I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a>
-                                        </label>
-                                    </div>
-                                    <asp:Button ID="Button1" runat="server" class="btn btn-primary w-100 py-2 mb-4" Text="Register" onclick="Button1_Click" />
-                                   
-
-                                   
-                                </form>
-                            </div>
-
-                            <!-- Register Tab -->
-                            <div class="tab-pane fade auth-form" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                <form>
-                                    <div class="mb-4">
-                                        <label for="loginEmail" class="form-label">Email address</label>
-
-                                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
-                                    </div>
-                                    <div class="mb-4">
                                         <label for="loginPassword" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                                        <asp:TextBox ID="Password" class="form-control" runat="server" TextMode="Password" placeholder="Enter your password" required></asp:TextBox>
+                                       
                                     </div>
                                     <div class="d-flex justify-content-between mb-4">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                                            <input class="form-check-input" type="checkbox" id="rememberMe" >
                                             <label class="form-check-label" for="rememberMe">Remember me</label>
                                         </div>
                                         <a href="#" class="text-primary">Forgot password?</a>
                                     </div>
-                                    <button type="submit" class="btn btn-primary w-100 py-2 mb-4">Login</button>
+                                    <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" CssClass="btn btn-primary w-100 py-2 mb-4" />
 
-                                   
+                                    <p>Don't Have an Account <a href="Register.aspx">Register Now</a></p>
 
                                    
                                 </form>
@@ -245,7 +214,7 @@
     <!-- Login/Register End -->
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-     <!-- Footer Start -->
+      <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
         <div class="container py-5">
             <div class="row g-5">
@@ -338,7 +307,6 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>

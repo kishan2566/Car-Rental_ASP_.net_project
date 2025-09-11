@@ -54,6 +54,6 @@ C:\Users\newfa\source\repos\car_rental_project\car_rental_project\bin\Microsoft.
 C:\Users\newfa\source\repos\car_rental_project\car_rental_project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\newfa\source\repos\car_rental_project\car_rental_project\obj\Debug\car_rental_project.csproj.AssemblyReference.cache
 C:\Users\newfa\source\repos\car_rental_project\car_rental_project\obj\Debug\car_rental_project.csproj.CoreCompileInputs.cache
-C:\Users\newfa\source\repos\car_rental_project\car_rental_project\obj\Debug\car_rental_project.csproj.CopyComplete
 C:\Users\newfa\source\repos\car_rental_project\car_rental_project\obj\Debug\car_rental_project.dll
 C:\Users\newfa\source\repos\car_rental_project\car_rental_project\obj\Debug\car_rental_project.pdb
+C:\Users\newfa\source\repos\car_rental_project\car_rental_project\obj\Debug\car_rent.AE9A4D8D.Up2Date

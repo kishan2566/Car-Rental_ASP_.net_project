@@ -24,15 +24,6 @@ namespace car_rental_project
         protected global::System.Web.UI.WebControls.TextBox First_Name;
 
         /// <summary>
-        /// Last_Name control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Last_Name;
-
-        /// <summary>
         /// Email control.
         /// </summary>
         /// <remarks>

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Configuration;
+using System.Data;
 
 namespace car_rental_project
 {
@@ -20,6 +21,31 @@ namespace car_rental_project
         protected void Page_Load(object sender, EventArgs e)
         {
             getcon();
+            if (Session["User"] == null)
+            {
+                
+               
+                
+            }
+            else
+            {
+                Label1.Text = Session["User"].ToString();
+
+            }
+            if (!IsPostBack)
+            {
+                if (Session["User"] == null)
+                {
+                    Login.Visible = true;
+                    Logout.Visible = false;
+                }
+                else
+                {
+                    Login.Visible = false;
+                    Logout.Visible = true;
+                  
+                }
+            }
         }
         void getcon()
         {
@@ -30,14 +56,23 @@ namespace car_rental_project
         protected void Button1_Click(object sender, EventArgs e)
         {
             
-            if (Button1.Text == "Book")
-            {
-                getcon();
-                
-                cmd = new SqlCommand("INSERT INTO bookings (car_name,pickup_location,dropoff_location,pickup_date,dropoff_date,pickup_time,dropoff_time) VALUES ('"+ddlcar.SelectedValue+"','"+txtpickup.Text+ "','"+txtdrop.Text+ "','"+txtDate1.Text+"','"+txtDate2.Text+"','"+ddltime1.SelectedValue+"','"+ddltime2.SelectedValue+"')", con);
-                cmd.ExecuteNonQuery();
-                
-            }
+         
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("Cars.aspx");
+        }
+
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void Login_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

@@ -67,19 +67,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.aspx" />
     <Content Include="404.html" />
+    <Content Include="about.aspx" />
     <Content Include="about.html" />
+    <Content Include="Add_Cars.aspx" />
+    <Content Include="AdminDashboard.aspx" />
     <Content Include="App_Data\car_rental_db.mdf" />
     <Content Include="App_Data\car_rental_db_log.ldf">
       <DependentUpon>car_rental_db.mdf</DependentUpon>
     </Content>
+    <Content Include="blog.aspx" />
     <Content Include="blog.html" />
+    <Content Include="Book.html" />
+    <Content Include="BookCar.aspx" />
     <Content Include="car-rent-website-template.jpg" />
+    <Content Include="Cars.aspx" />
     <Content Include="cars.html" />
+    <Content Include="Contact.aspx" />
     <Content Include="contact.html" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
+    <Content Include="feature.aspx" />
     <Content Include="feature.html" />
+    <Content Include="images\5166950.jpg" />
+    <Content Include="images\background.jpg" />
     <Content Include="img\about-icon-1.png" />
     <Content Include="img\about-icon-2.png" />
     <Content Include="img\about-img-1.jpg" />
@@ -134,21 +146,90 @@
     <Content Include="lib\wow\wow.min.js" />
     <Content Include="LICENSE.txt" />
     <Content Include="Login.aspx" />
+    <Content Include="old_cars.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="login.html" />
     <Content Include="READ-ME.txt" />
+    <Content Include="Registration_Success.html" />
+    <Content Include="service.aspx" />
     <Content Include="service.html" />
+    <Content Include="team.aspx" />
     <Content Include="team.html" />
+    <Content Include="testimonial.aspx" />
     <Content Include="testimonial.html" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Cars.aspx.cs">
+      <DependentUpon>Add_Cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add_Cars.aspx.designer.cs">
+      <DependentUpon>Add_Cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog.aspx.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blog.aspx.designer.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookCar.aspx.cs">
+      <DependentUpon>BookCar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookCar.aspx.designer.cs">
+      <DependentUpon>BookCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cars.aspx.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cars.aspx.designer.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.Master.cs">
       <DependentUpon>default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="default.Master.designer.cs">
       <DependentUpon>default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="feature.aspx.cs">
+      <DependentUpon>feature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feature.aspx.designer.cs">
+      <DependentUpon>feature.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -157,6 +238,20 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="old_cars.aspx.cs">
+      <DependentUpon>old_cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="old_cars.aspx.designer.cs">
+      <DependentUpon>old_cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -164,6 +259,27 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="service.aspx.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="service.aspx.designer.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="team.aspx.cs">
+      <DependentUpon>team.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="team.aspx.designer.cs">
+      <DependentUpon>team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testimonial.aspx.cs">
+      <DependentUpon>testimonial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testimonial.aspx.designer.cs">
+      <DependentUpon>testimonial.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +376,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

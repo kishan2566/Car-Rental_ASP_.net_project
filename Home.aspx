@@ -1,30 +1,32 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="car_rental_project.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <meta charset="utf-8">
-        <title>Cental - Car Rent Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+          <head>
+    <meta charset="utf-8">
+    <title>Cental - Car Rent Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      
@@ -45,7 +47,7 @@
                         <div class="d-flex flex-wrap">
                             <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
                             <a href="tel:+01234567890" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
-                            <a href="/cdn-cgi/l/email-protection#35504d5458455950755258545c591b565a58" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i><span class="__cf_email__" data-cfemail="eeab968f839e828bae89838f8782c08d8183">[email&#160;protected]</span></a>
+                            <a href="mailto:example@gmail.com" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
                         </div>
                     </div>
                     <div class="col-lg-6 text-center text-lg-end">
@@ -74,24 +76,27 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav mx-auto py-0">
-                            <a href="WebForm1.aspx" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Service</a>
-                            <a href="blog.html" class="nav-item nav-link">Blog</a>
+                            <a href="Home.aspx" class="nav-item nav-link active">Home</a>
+                            <a href="about.aspx" class="nav-item nav-link">About</a>
+                            <a href="service.aspx" class="nav-item nav-link">Service</a>
+                            <a href="blog.aspx" class="nav-item nav-link">Blog</a>
                             
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu m-0">
-                                    <a href="feature.html" class="dropdown-item">Our Feature</a>
-                                    <a href="cars.html" class="dropdown-item">Our Cars</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                    <a href="feature.aspx" class="dropdown-item">Our Feature</a>
+                                    <a href="cars.aspx" class="dropdown-item">Our Cars</a>
+                                    <a href="team.aspx" class="dropdown-item">Our Team</a>
+                                    <a href="testimonial.aspx" class="dropdown-item">Testimonial</a>
+                                    <a href="404.aspx" class="dropdown-item">404 Page</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="Contact.aspx" class="nav-item nav-link">Contact</a>
                         </div>
-                        <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a>
+                        <asp:Button ID="Login" class="btn btn-primary rounded-pill py-2 px-4" runat="server" Text="Login" OnClick="Login_Click" />
+                        <!--<a href="Login.aspx" ID="Login" >Get Started</a> -->
+                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label> &nbsp; &nbsp; &nbsp; <br />
+                        <asp:Button ID="Logout" runat="server" Text="Logout" Visible="false" class="btn btn-primary rounded-pill py-2 px-4" OnClick="Logout_Click" />
                     </div>
                 </nav>
             </div>
@@ -105,104 +110,26 @@
                     <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
                     <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
                 </ol>
-                <div class="carousel-inner" role="listbox">
+                <div class="" role="listbox">
                     <div class="carousel-item active">
                         <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="First slide"/>
                         <div class="carousel-caption">
                             <div class="container py-4">
-                                <div class="row g-5">
-                                    <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
-                                        <div class="bg-secondary rounded p-5">
-                                            <h4 class="text-white mb-4">CONTINUE CAR RESERVATION</h4>
-                                            <form>
-                                                <div class="row g-3">
-                                                    <div class="col-12">
-                                                        <asp:DropDownList ID="ddlcar" runat="server" class="form-select">
-                                                            <asp:ListItem Selected="True">Select Your Car type</asp:ListItem>
-                                                            <asp:ListItem>VW Golf VII</asp:ListItem>
-                                                            <asp:ListItem>Audi A1 S-Line</asp:ListItem>
-                                                            <asp:ListItem>Toyota Camry</asp:ListItem>
-                                                            <asp:ListItem>BMW 320 ModernLine</asp:ListItem>
-                                                        </asp:DropDownList>
-                                                       
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group">
-                                                            <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                                <span class="fas fa-map-marker-alt"></span> <span class="ms-1">Pick Up</span>
-                                                            </div>
-                                                            <asp:TextBox ID="txtpickup" class="form-control" placeholder="Enter a City or Airport" runat="server"></asp:TextBox>
-                                                      
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <a href="#" class="text-start text-white d-block mb-2">Need a different drop-off location?</a>
-                                                        <div class="input-group">
-                                                            <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                                <span class="fas fa-map-marker-alt"></span><span class="ms-1">Drop off</span>
-                                                            </div>
-                                                            <asp:TextBox ID="txtdrop" class="form-control" placeholder="Enter a City or Airport" runat="server"></asp:TextBox>
-                                                          
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group">
-                                                            <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                                <span class="fas fa-calendar-alt"></span><span class="ms-1">Pick Up</span>
-                                                            </div>
-                                                          <asp:TextBox ID="txtDate1" runat="server" TextMode="Date"></asp:TextBox>
-
-                                                           
-
-                                                            <asp:DropDownList ID="ddltime1" runat="server">
-                                                                <asp:ListItem>12:00 AM</asp:ListItem>
-                                                                <asp:ListItem>1:00 AM</asp:ListItem>
-                                                                <asp:ListItem>2:00 AM</asp:ListItem>
-                                                                <asp:ListItem>3:00 AM</asp:ListItem>
-                                                                <asp:ListItem>4:00 AM</asp:ListItem>
-                                                                <asp:ListItem>5:00 AM</asp:ListItem>
-                                                                <asp:ListItem>6:00 AM</asp:ListItem>
-                                                                <asp:ListItem>7:00 AM</asp:ListItem>
-                                                            </asp:DropDownList>
-
-                                                           
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group">
-                                                            <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                                <span class="fas fa-calendar-alt"></span><span class="ms-1">Drop off</span>
-                                                            </div>
-                                                            <asp:TextBox ID="txtDate2" runat="server" TextMode="Date"></asp:TextBox>
-
-                                                           
-
-                                                             <asp:DropDownList ID="ddltime2" runat="server">
-                                                                <asp:ListItem>12:00 AM</asp:ListItem>
-                                                                <asp:ListItem>1:00 AM</asp:ListItem>
-                                                                <asp:ListItem>2:00 AM</asp:ListItem>
-                                                                <asp:ListItem>3:00 AM</asp:ListItem>
-                                                                <asp:ListItem>4:00 AM</asp:ListItem>
-                                                                <asp:ListItem>5:00 AM</asp:ListItem>
-                                                                <asp:ListItem>6:00 AM</asp:ListItem>
-                                                                <asp:ListItem>7:00 AM</asp:ListItem>
-                                                            </asp:DropDownList>
-
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <asp:Button ID="Button1" runat="server" class="btn btn-light w-100 py-2" Text="Book" OnClick="Button1_Click" />
-                                                        
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
+                                <div class="">
+                                    
                                     <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                                         <div class="text-start">
                                             <h1 class="display-5 text-white">Get 15% off your rental Plan your trip now</h1>
                                             <p>Treat yourself in USA</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
+                                        <div class=" rounded p-5">
+                                           
+
+                                            <asp:Button ID="Button1" runat="server" Text="Book Now" CssClass="btn btn-primary rounded-pill py-2 px-4" OnClick="Button1_Click1" />
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -215,78 +142,7 @@
                             <div class="container py-4">
                                 <div class="row g-5">
                                     <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
-                                        <div class="bg-secondary rounded p-5">
-                                            <h4 class="text-white mb-4">CONTINUE CAR RESERVATION</h4>
-                                            <form>
-                                                <div class="row g-3">
-                                                    <div class="col-12">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Select Your Car type</option>
-                                                            <option value="1">VW Golf VII</option>
-                                                            <option value="2">Audi A1 S-Line</option>
-                                                            <option value="3">Toyota Camry</option>
-                                                            <option value="4">BMW 320 ModernLine</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group">
-                                                            <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                                <span class="fas fa-map-marker-alt"></span><span class="ms-1">Pick Up</span>
-                                                            </div>
-                                                            <input class="form-control" type="text" placeholder="Enter a City or Airport" aria-label="Enter a City or Airport">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <a href="#" class="text-start text-white d-block mb-2">Need a different drop-off location?</a>
-                                                        <div class="input-group">
-                                                            <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                                <span class="fas fa-map-marker-alt"></span><span class="ms-1">Drop off</span>
-                                                            </div>
-                                                            <input class="form-control" type="text" placeholder="Enter a City or Airport" aria-label="Enter a City or Airport">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group">
-                                                            <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                                <span class="fas fa-calendar-alt"></span><span class="ms-1">Pick Up</span>
-                                                            </div>
-                                                            <input class="form-control" type="date">
-                                                            <select class="form-select ms-3" aria-label="Default select example">
-                                                                <option selected>12:00AM</option>
-                                                                <option value="1">1:00AM</option>
-                                                                <option value="2">2:00AM</option>
-                                                                <option value="3">3:00AM</option>
-                                                                <option value="4">4:00AM</option>
-                                                                <option value="5">5:00AM</option>
-                                                                <option value="6">6:00AM</option>
-                                                                <option value="7">7:00AM</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group">
-                                                            <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                                <span class="fas fa-calendar-alt"></span><span class="ms-1">Drop off</span>
-                                                            </div>
-                                                            <input class="form-control" type="date">
-                                                            <select class="form-select ms-3" aria-label="Default select example">
-                                                                <option selected>12:00AM</option>
-                                                                <option value="1">1:00AM</option>
-                                                                <option value="2">2:00AM</option>
-                                                                <option value="3">3:00AM</option>
-                                                                <option value="4">4:00AM</option>
-                                                                <option value="5">5:00AM</option>
-                                                                <option value="6">6:00AM</option>
-                                                                <option value="7">7:00AM</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <button class="btn btn-light w-100 py-2">Book Now</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
+                                       
                                     </div>
                                     <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                                         <div class="text-start">
@@ -970,7 +826,7 @@
         <div class="container-fluid testimonial pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h1 class="display-5 text-capitalize mb-3">Our Clients<span class="text-primary"> Riviews</span></h1>
+                    <h1 class="display-5 text-capitalize mb-3">Our Clients<span class="text-primary"> Reviews</span></h1>
                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
                     </p>
                 </div>
@@ -1063,11 +919,11 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Quick Links</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Cars</a>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About</a>
+                            <a href="Cars.aspx"><i class="fas fa-angle-right me-2"></i> Cars</a>
                             <a href="#"><i class="fas fa-angle-right me-2"></i> Car Types</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Team</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+                            <a href="team.html"><i class="fas fa-angle-right me-2"></i> Team</a>
+                            <a href="Contact.aspx"><i class="fas fa-angle-right me-2"></i> Contact us</a>
                             <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
                         </div>
                     </div>
@@ -1096,10 +952,10 @@
                             <a href="tel:+012 345 67890"><i class="fas fa-phone me-2"></i> +012 345 67890</a>
                             <a href="tel:+012 345 67890" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
                             <div class="d-flex">
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-facebook-f text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-twitter text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-instagram text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-0" href=""><i class="fab fa-linkedin-in text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="facebook.com" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="twitter.com" target="_blank"><i class="fab fa-twitter text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="instagram.com" target="_blank"><i class="fab fa-instagram text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="linkedin.com" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1113,7 +969,7 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Cental</a>, All right reserved.</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end text-body">
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->

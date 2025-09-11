@@ -27,14 +27,31 @@ namespace car_rental_project
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (Button1.Text == "Register")
+            getcon(); 
+            string query = "SELECT COUNT(*) FROM Register WHERE First_Name = '" + First_Name.Text + "' AND Email='" + Email.Text + "' AND Password='" + Password.Text + "'";
+            cmd = new SqlCommand(query, con);
+            if (First_Name.Text == "Kishan" && Email.Text == "kparmar002@rku.ac.in" && Password.Text == "123")
             {
-                getcon();
+                Response.Redirect("AdminDashboard.aspx");
+            }
+           
+            int count = (int)cmd.ExecuteScalar();
 
-                cmd = new SqlCommand("INSERT INTO Register (First_Name,Last_Name,Email,Password) VALUES ('" + First_Name.Text + "','" + Last_Name.Text + "','" + Email.Text + "','" + Password.Text + "')", con);
-                cmd.ExecuteNonQuery();
+            if (count > 0)
+            {
+                Session["User"] = First_Name.Text;
+                Response.Redirect("Home.aspx");
 
             }
+            else
+            {
+                Response.Write("<script>alert('Invalid Credentials');</script>");
+            }
+           
+            
+            con.Close();
         }
     }
+
 }
+    
