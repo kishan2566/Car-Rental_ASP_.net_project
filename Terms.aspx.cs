@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -10,18 +9,40 @@ using System.Web.UI.WebControls;
 
 namespace car_rental_project
 {
-    public partial class AdminDashboard : System.Web.UI.Page
+    public partial class Terms : System.Web.UI.Page
     {
         String s = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
         SqlConnection con;
         SqlCommand cmd;
         SqlDataAdapter da;
-        string fnm;
-        DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
         {
             getcon();
-            
+            if (Session["User"] == null)
+            {
+
+
+
+            }
+            else
+            {
+                Label1.Text = Session["User"].ToString();
+
+            }
+            if (!IsPostBack)
+            {
+                if (Session["User"] == null)
+                {
+                    Login.Visible = true;
+                    Logout.Visible = false;
+                }
+                else
+                {
+                    Login.Visible = false;
+                    Logout.Visible = true;
+
+                }
+            }
         }
         void getcon()
         {
@@ -33,13 +54,10 @@ namespace car_rental_project
             Session.Abandon();
             Response.Redirect("Login.aspx");
         }
-        protected void CarsCount()
+
+        protected void Login_Click(object sender, EventArgs e)
         {
-            int totalCars = 0;
-            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Cars", con);
-           
-            totalCars = (int)cmd.ExecuteScalar();
-            lblCars.Text = totalCars.ToString();
+            Response.Redirect("Login.aspx");
         }
     }
 }

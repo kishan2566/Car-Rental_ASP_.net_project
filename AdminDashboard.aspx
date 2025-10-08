@@ -1,14 +1,32 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="AdminDashboard.aspx.cs" Inherits="car_rental_project.AdminDashboard" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <head>
-        <title>Admin Dashboard</title>
+        <meta charset="utf-8">
+<title>Cental - Car Rent Website Template</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-        <!-- Custom CSS -->
-        <link href="css/admin-dashboard.css" rel="stylesheet" />
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Libraries Stylesheet -->
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Template Stylesheet -->
+<link href="css/style.css" rel="stylesheet">
+<title>Terms & Conditions - Cental</title>
         <style>
             body {
     font-family: 'Lato', sans-serif;
@@ -57,36 +75,56 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <body>
-    <div class="d-flex" id="wrapper">
-        <!-- Sidebar -->
-        <div class="bg-dark border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading text-white text-center py-4">
-                <i class="fas fa-car-alt"></i> Car Rental Admin
+                   <!-- Navbar & Hero Start -->
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="display-6 text-primary"><i class="fas fa-car-alt me-3"></i></i>Cental Admin</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="AdminDashboard.aspx" class="nav-item nav-link active ">Dashboard</a>
+                    <a href="Add_Cars.aspx" class="nav-item nav-link ">Manage Cars</a>
+                    <a href="Manage_Users.aspx" class="nav-item nav-link">Manage Users</a>
+                    <a href="Bookings.aspx" class="nav-item nav-link">Bookings</a>
+                    
+                   
+                 
+                    <a href="Reports.aspx" class="nav-item nav-link">Reports</a>
+                </div>
+               
+                <!--<a href="Login.aspx" ID="Login" >Get Started</a> -->
+                <asp:Label ID="Label1" runat="server" Text=""></asp:Label> &nbsp; &nbsp; &nbsp; <br />
+                <asp:Button ID="Logout" runat="server" Text="Logout" Visible="true" class="btn btn-primary rounded-pill py-2 px-4" OnClick="Logout_Click" />
             </div>
-            <div class="list-group list-group-flush">
-                <a href="AdminDashboard.aspx" class="list-group-item list-group-item-action bg-dark text-white active">
-                    <i class="fas fa-tachometer-alt me-2"></i> Dashboard
-                </a>
-                <a href="Add_Cars.aspx" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-car me-2"></i> Manage Cars
-                </a>
-                <a href="Bookings.aspx" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-calendar-check me-2"></i> Bookings
-                </a>
-                <a href="Users.aspx" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-users me-2"></i> Users
-                </a>
-                <a href="Reports.aspx" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-chart-line me-2"></i> Reports
-                </a>
-                <a>
-              
- <asp:Button ID="Logout" runat="server" Text="Logout" class="list-group-item list-group-item-action bg-dark text-white" OnClick="Logout_Click" />
-                     
-                </a>
-            </div>
-        </div>
-        <!-- /#sidebar-wrapper -->
+        </nav>
+    </div>
+</div>
+<!-- Navbar & Hero End -->
+                <!-- Topbar Start -->
+   <div class="container-fluid topbar bg-secondary d-none d-xl-block w-100">
+       <div class="container">
+           <div class="row gx-0 align-items-center" style="height: 45px;">
+               
+                   <center> <h1 style="color:crimson;"><b>Dashboard</b></h1></center>
+               </div>
+               <div class="col-lg-6 text-center text-lg-end">
+                   <div class="d-flex align-items-center justify-content-end">
+                      
+                   </div>
+               </div>
+          
+       </div>
+   </div>
+   <!-- Topbar End -->
+       <br />
+       <br />
+       <br />
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -101,7 +139,7 @@
                         <div class="card shadow-sm text-center p-3">
                             <i class="fas fa-car fa-2x text-primary mb-2"></i>
                             <h5>Total Cars</h5>
-                            <asp:Label ID="lblCars" runat="server" CssClass="fw-bold fs-4">--</asp:Label>
+                            <asp:Label ID="lblCars" runat="server" ></asp:Label>
                         </div>
                     </div>
                     <div class="col-md-3">

@@ -23,6 +23,7 @@ namespace car_rental_project
         protected void Page_Load(object sender, EventArgs e)
         {
             getcon();
+            
             fillgrid();
         }
         void getcon()
@@ -140,6 +141,9 @@ namespace car_rental_project
         {
 
         }
+       
+
+        
     }
 }
 

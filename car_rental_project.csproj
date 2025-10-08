@@ -72,6 +72,7 @@
     <Content Include="about.aspx" />
     <Content Include="about.html" />
     <Content Include="Add_Cars.aspx" />
+    <Content Include="Add_Cars_2.aspx" />
     <Content Include="AdminDashboard.aspx" />
     <Content Include="App_Data\car_rental_db.mdf" />
     <Content Include="App_Data\car_rental_db_log.ldf">
@@ -86,6 +87,7 @@
     <Content Include="cars.html" />
     <Content Include="Contact.aspx" />
     <Content Include="contact.html" />
+    <Content Include="css\admin.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
     <Content Include="feature.aspx" />
@@ -155,6 +157,7 @@
     <Content Include="service.html" />
     <Content Include="team.aspx" />
     <Content Include="team.html" />
+    <Content Include="Terms.aspx" />
     <Content Include="testimonial.aspx" />
     <Content Include="testimonial.html" />
     <Content Include="Web.config" />
@@ -181,6 +184,13 @@
     </Compile>
     <Compile Include="Add_Cars.aspx.designer.cs">
       <DependentUpon>Add_Cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Cars_2.aspx.cs">
+      <DependentUpon>Add_Cars_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add_Cars_2.aspx.designer.cs">
+      <DependentUpon>Add_Cars_2.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
@@ -273,6 +283,13 @@
     </Compile>
     <Compile Include="team.aspx.designer.cs">
       <DependentUpon>team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terms.aspx.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terms.aspx.designer.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
     </Compile>
     <Compile Include="testimonial.aspx.cs">
       <DependentUpon>testimonial.aspx</DependentUpon>
