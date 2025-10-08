@@ -72,7 +72,6 @@
     <Content Include="about.aspx" />
     <Content Include="about.html" />
     <Content Include="Add_Cars.aspx" />
-    <Content Include="Add_Cars_2.aspx" />
     <Content Include="AdminDashboard.aspx" />
     <Content Include="App_Data\car_rental_db.mdf" />
     <Content Include="App_Data\car_rental_db_log.ldf">
@@ -184,13 +183,6 @@
     </Compile>
     <Compile Include="Add_Cars.aspx.designer.cs">
       <DependentUpon>Add_Cars.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Add_Cars_2.aspx.cs">
-      <DependentUpon>Add_Cars_2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Add_Cars_2.aspx.designer.cs">
-      <DependentUpon>Add_Cars_2.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
